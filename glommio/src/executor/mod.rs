@@ -1421,7 +1421,7 @@ impl LocalExecutor {
                     .active_executors
                     .iter()
                     .map(|x| x.borrow().vruntime)
-                    .min()
+                    .max()
                     .unwrap_or(vruntime);
 
                 true
